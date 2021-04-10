@@ -1,11 +1,13 @@
 import React from "react"
 import Header from "../components/Header"
+import Container from "../components/Container/Container"
 
 const Contact = () => (
-  <div>
+  <Container>
     <Header text="Contact Page" />
+    <p>Gatsby</p>
     <p>Visit Gatsby!!</p>
-  </div>
+  </Container>
 )
 
 export default Contact

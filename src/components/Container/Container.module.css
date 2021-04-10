@@ -3,5 +3,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: cursive,fantasy;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.list, .ul {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+}
+.header{
+  margin: 0px;
 }

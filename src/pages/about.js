@@ -1,16 +1,30 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Header from "../components/Header"
 import Container from "../components/Container/Container"
 
-const About = () => (
-  <div>
-    <Header text="About Page" />
+const About = ({
+  site: {
+    metaData: { title },
+  },
+}) => {
+  return (
     <Container>
-      <p>Gatsby!!</p>
-      <Link to="/contact">Contact</Link>
+      <Header text="About Page" />
+      <p>{title}!!</p>
+      <p>About page</p>
     </Container>
-  </div>
-)
+  )
+}
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 export default About
